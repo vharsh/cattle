@@ -1,12 +1,11 @@
 language: java
-script: ./scripts/build
+script: "./scripts/build"
 deploy:
+  skip_cleanup: true
   provider: releases
   api_key:
-    secure: WsgYfIkgw/OxERrwd+0wHjv1ZGwJkQVk8FbgzDMaG4lR5qCWt/FSkdhxX09G3WsRP/xiuEn4tJqj36rbbMKPkKPX1Xo6/MCiHMvTZZt837iGibbHmPEZnQ6vkFWHTKsangTDZkRmRo9JBcmJVvGA5eSVRGayczBE6kypsI8PXtVEBggVM4YR1aXnMiuMlT/6773eFLlZHGnW1Qs829I8PUoJolhfEJvmrCxCQJD2NPSUxWnZTqZw6YjPrORTFK1TjQ97c3rBqWL7yO3qlk5Z5qM09HMON8wX/ULkMe4elbTF+CfWLBfd0Xlb2B+4r5CzZCa3HeRFwkzj1op8PmxoOyjfmccQIygbrVoBj8hX7PiogtHVzY96B6T2MzQFET9P8bdS7HAgKLFKmtnVIivvJCF8gTFLhdOpNs+03c2BZrmT5XEo5ESdzS6KIhfY3DxXqq6/8/WTRn/nTPrKwBQV/pFBv78eAi7xED2Z3A3p6momJhzp+FIxsNBcoyfEgyulhYGaVmFEvk0q4icizPM456ntaBoqCQRxmC4uDcfbZpc0vHtI78SzQ3vTZ1SeVeOuGRpo8hqRtt8NhDVZARldVXATJPIFkZAL9R+7/UrSfG/w/JCHDn3OEObWdUOUjHrd8lnc7bcwKW3hdw5KJ40qcc260zfDG0ZO5y1nIP5Bf04=
-  file_glob: true
-  file: dist/cattle-*.tar.gz
+    secure: OIB+Wj85tB7Zu3tH1akdh34x9CH5G/edWdeylL7MPD+8fnDH/L2UMaA01/z4yYPn09cfpedwtTTYf2GYt8/E9hiuP1/PJTjI8xslE5IASMa8wuPdkS5Z85XHzGUybsbY1H1aJHIV2ldJv35QUb3mdAStYShoY5w1mGThalwoGr5AJlnYFpGdC304UHVRj2x0FU0KELDFHvoS9qX68N7VKMtw941NDpPpSjQgZSYAZtTK32PrWr6r90xmJoIiUF5v5UI8g//GgEYIWe9uq7s/7p1eGoWOQfvhBmMP0V0Qx7+GYJV7WcTA4Z1rpcYMcJ+6qBmmF/FU6K7gea+r1QPblhgCK3ULyNfbD438Kx2HxdcBFgYG7Qf1sy8ab0xsPn5D+20i1QdPDJvA96ZZq/eoHv2/TV1Wf90YopuHG3oClQ+olhUTqMBWeUAlJBLDgTYxDGYyyd2EA3S+U1HchoG0ARKkM7EQfulWaluzNpU73jNzIZ6XM9DYs3LbtoI27Pv/HvpZy51LgpRnZe3GhVrq1Hl4QrVl+fdf4zaedhROYyzFnhul/tva7c7yRicoEOm+WnTzcAuehuCF9oDWfhUehlLXGWfkc5dT9gBMFPrXXV9AAwWZuX7Y0d2MgWxFXx+DrXTLeQXlITuhi3RudqGa0QetapdoYH1yryTNA+/RBRY=
+file_glob: true
+file: "dist/cattle-*.tar.gz"
   on:
     repo: vharsh/cattle
-    overwrite: true
-
