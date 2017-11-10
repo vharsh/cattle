@@ -1,0 +1,12 @@
+language: java
+script: ./scripts/build
+deploy:
+  provider: releases
+  api_key:
+    secure: WsgYfIkgw/OxERrwd+0wHjv1ZGwJkQVk8FbgzDMaG4lR5qCWt/FSkdhxX09G3WsRP/xiuEn4tJqj36rbbMKPkKPX1Xo6/MCiHMvTZZt837iGibbHmPEZnQ6vkFWHTKsangTDZkRmRo9JBcmJVvGA5eSVRGayczBE6kypsI8PXtVEBggVM4YR1aXnMiuMlT/6773eFLlZHGnW1Qs829I8PUoJolhfEJvmrCxCQJD2NPSUxWnZTqZw6YjPrORTFK1TjQ97c3rBqWL7yO3qlk5Z5qM09HMON8wX/ULkMe4elbTF+CfWLBfd0Xlb2B+4r5CzZCa3HeRFwkzj1op8PmxoOyjfmccQIygbrVoBj8hX7PiogtHVzY96B6T2MzQFET9P8bdS7HAgKLFKmtnVIivvJCF8gTFLhdOpNs+03c2BZrmT5XEo5ESdzS6KIhfY3DxXqq6/8/WTRn/nTPrKwBQV/pFBv78eAi7xED2Z3A3p6momJhzp+FIxsNBcoyfEgyulhYGaVmFEvk0q4icizPM456ntaBoqCQRxmC4uDcfbZpc0vHtI78SzQ3vTZ1SeVeOuGRpo8hqRtt8NhDVZARldVXATJPIFkZAL9R+7/UrSfG/w/JCHDn3OEObWdUOUjHrd8lnc7bcwKW3hdw5KJ40qcc260zfDG0ZO5y1nIP5Bf04=
+  file_glob: true
+  file: dist/cattle-*.tar.gz
+  on:
+    repo: vharsh/cattle
+    overwrite: true
+
