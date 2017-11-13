@@ -10,5 +10,5 @@ deploy:
   file: dist/cattle-*.tar.gz
   on:
     repo: vharsh/cattle
-    tags: false
+    tags: true
     branch: master
