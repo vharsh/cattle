@@ -1,5 +1,9 @@
 language: java
-script: ./scripts/build
+script:
+  - ./scripts/build
+  - java -version
+  - gradle -v
+  
 deploy:
   provider: releases
   skip_cleanup: true # Otherwise Travis Cleans all the files created during build
