@@ -1,5 +1,24 @@
 language: java
+sudo: required
 script:
+  - node -v
+  - npm -v 
+  - which node
+  - nvm install v6.12.3
+  - rm -rf /home/travis/.nvm
+  - sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man1/node*}
+  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  - sudo apt-get update -qq
+  - sudo apt-get install -y nodejs phantomjs yarn
+  - sudo yarn global add bower
+  - sudo npm install -g ember-cli@2.15.1
+  - node -v
+  - npm -v
+  - yarn -v
+  - bower -v
+  - java -v
+  - ember -v
   - ./scripts/build
   - java -version
   - gradle -v
